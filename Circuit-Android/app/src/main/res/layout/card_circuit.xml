@@ -52,14 +52,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="50dp"
-                android:text="Acheter"
+                android:text="@string/btn_acheter"
+                android:textStyle="bold"
                 android:theme="@style/PrimaryFlatButton" />
 
             <Button
                 android:id="@+id/btn_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Detail"
+                android:text="@string/btn_detail"
+                android:textStyle="bold"
                 android:theme="@style/PrimaryFlatButton" />
         </LinearLayout>
     </LinearLayout>

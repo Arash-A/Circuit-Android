@@ -10,5 +10,4 @@
     <string name="btn_acheter">Acheter</string>
     <string name="btn_detail">Détail</string>
     <string name="btn_lister_circuit">Lister des circuits</string>
-    <string name="btn_parametre">Paramètres</string>
 </resources>
