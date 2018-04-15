@@ -117,8 +117,10 @@ public class ListeActivity extends AppCompatActivity {
                 Circuit item = new Circuit();
                 item.setNom(post.optString("nomCircuit"));
 
-                String imgUrl="https://circuitvoyage.000webhostapp.com/"+post.optString("urlImage");
-                item.setUrlImage(imgUrl);
+                String imgUrl=post.optString("urlImage");
+                imgUrl=imgUrl.replace("\\","");
+                String fix="https://circuitvoyage.000webhostapp.com/";
+                item.setUrlImage(fix+imgUrl);
                 item.setDescription(post.optString("description"));
                 circuitsList.add(item);
             }

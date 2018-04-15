@@ -45,7 +45,7 @@ public class CircuitAdapter extends RecyclerView.Adapter<CircuitAdapter.CustomVi
 
           String url = "https://circuitvoyage.000webhostapp.com/pochettes/4ae51220e772299da34354965f2aae8acf0a73be.jpg";
 
-          Picasso.with(mContext).load(url)
+          Picasso.with(mContext).load(circuit.getUrlImage())
                     .error(R.drawable.koala)
                     .placeholder(R.drawable.iconcircuit)
                     .into(customViewHolder.imageView);
