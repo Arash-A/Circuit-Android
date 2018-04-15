@@ -25,7 +25,7 @@
         <item name="android:buttonStyle">
             @style/Widget.AppCompat.Button.Borderless.Colored
         </item>
-        <item name="colorAccent">#FFAB40</item>
+        <item name="colorAccent">#CC7A00</item>
     </style>
 
 </resources>
