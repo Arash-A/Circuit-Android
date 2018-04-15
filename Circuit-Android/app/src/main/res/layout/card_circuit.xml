@@ -7,11 +7,13 @@
     card_view:cardBackgroundColor="@color/colorRoseMoreLight"
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="12dp"
+
     card_view:contentPadding="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
         android:orientation="vertical">
 
         <ImageView
@@ -19,69 +21,81 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/iconcircuit" />
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/titre_circuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Titre Circuitt oitttttttttttttttttttttttttt"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnImg_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/keyboard_arrow_down_grey_48x48" />
+
+        <LinearLayout
+            android:id="@+id/detail_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
-                android:id="@+id/titre_circuit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Titre Circuit"
-                android:textColor="#000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-<!--            <TextView
                 android:id="@+id/prix_circuit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:padding="8dp"
                 android:text="$1000"
                 android:textColor="#000"
-                android:textSize="16sp" />-->
-        </RelativeLayout>
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/desc_circuit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/titre_circuit"
-            android:padding="8dp"
-            android:text="Description pour notre circuit"
-            android:textColor="#000"
-            android:textSize="14sp" />
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btn_acheter"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/desc_circuit"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="@string/btn_acheter"
-                android:textStyle="bold"
-                android:theme="@style/PrimaryFlatButton" />
+                android:layout_below="@+id/titre_circuit"
+                android:padding="8dp"
+                android:text="Description pour notre circuit"
+                android:textColor="#000"
+                android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/btn_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="@string/btn_detail"
-                android:textStyle="bold"
-                android:theme="@style/PrimaryFlatButton" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        </RelativeLayout>
+                <Button
+                    android:id="@+id/btn_acheter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/btn_acheter"
+                    android:textStyle="bold"
+                    android:theme="@style/PrimaryFlatButton" />
+
+                <Button
+                    android:id="@+id/btn_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/btn_detail"
+                    android:textStyle="bold"
+                    android:theme="@style/PrimaryFlatButton" />
+
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
-
 </android.support.v7.widget.CardView>
 

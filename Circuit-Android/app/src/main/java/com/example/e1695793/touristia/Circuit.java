@@ -7,7 +7,7 @@ public class Circuit {
     private String description;
     private int capacite;
     private String urlImage;
-    private int prix;
+    private String prix;
     private int enVigueur;
     private int idTheme;
     private int latitude;
@@ -53,11 +53,11 @@ public class Circuit {
         this.urlImage = urlImage;
     }
 
-    public int getPrix() {
+    public String getPrix() {
         return prix;
     }
 
-    public void setPrix(int prix) {
+    public void setPrix(String prix) {
         this.prix = prix;
     }
 

@@ -122,6 +122,7 @@ public class ListeActivity extends AppCompatActivity {
                 String fix="https://circuitvoyage.000webhostapp.com/";
                 item.setUrlImage(fix+imgUrl);
                 item.setDescription(post.optString("description"));
+                item.setPrix(post.optString("prix"));
                 circuitsList.add(item);
             }
         } catch (JSONException e) {
