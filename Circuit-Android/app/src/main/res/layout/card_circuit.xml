@@ -37,14 +37,14 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
+<!--            <TextView
                 android:id="@+id/prix_circuit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="$1000"
                 android:textColor="#000"
-                android:textSize="16sp" />
+                android:textSize="16sp" />-->
         </RelativeLayout>
 
         <TextView

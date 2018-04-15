@@ -54,7 +54,7 @@ public class ListeActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        String url = "http://stacktips.com/?json=get_category_posts&slug=news&count=30";
+        String url = "https://touristia.000webhostapp.com/services/circuits";
         new DownloadTask().execute(url);
 
     }
@@ -115,8 +115,11 @@ public class ListeActivity extends AppCompatActivity {
             for (int i = 0; i < posts.length(); i++) {
                 JSONObject post = posts.optJSONObject(i);
                 Circuit item = new Circuit();
-                item.setNom(post.optString("title"));
-                item.setUrlImage("https://circuitvoyage.000webhostapp.com/pochettes/4ae51220e772299da34354965f2aae8acf0a73be.jpg");
+                item.setNom(post.optString("nomCircuit"));
+
+                String imgUrl="https://circuitvoyage.000webhostapp.com/"+post.optString("urlImage");
+                item.setUrlImage(imgUrl);
+                item.setDescription(post.optString("description"));
                 circuitsList.add(item);
             }
         } catch (JSONException e) {

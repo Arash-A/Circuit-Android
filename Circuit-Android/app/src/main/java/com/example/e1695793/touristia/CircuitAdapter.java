@@ -55,8 +55,8 @@ public class CircuitAdapter extends RecyclerView.Adapter<CircuitAdapter.CustomVi
 /*        customViewHolder.textViewTitre.setText(circuit.getNom());
         customViewHolder.textViewDesc.setText(circuit.getDescription());*/
 
-        customViewHolder.textViewTitre.setText("circuit "+i);
-        customViewHolder.textViewDesc.setText(circuit.getNom());
+        customViewHolder.textViewTitre.setText(circuit.getNom());
+        customViewHolder.textViewDesc.setText(circuit.getDescription());
 
         //customViewHolder.imageView.setImageURI(uriImg);
 /*      Glide.with(mContext).load("https://circuitvoyage.000webhostapp.com/pochettes/4ae51220e772299da34354965f2aae8acf0a73be.jpg")
