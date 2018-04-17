@@ -11,4 +11,25 @@
     <string name="btn_detail">Plus de Détail</string>
     <string name="btn_lister_circuit">Lister des circuits</string>
     <string name="btn_parametre">Paramètres</string>
+    <string name="itm_connecter">Se connecter</string>
+    <string name="itm_siteWeb">Notre wite web</string>
+    <string name="itm_infoEquipe">Notre equipe</string>
+    <string name="itm_panier">Mon Panier</string>
+    <string name="itm_deconn">Déconnexion</string>
+    <string name="title_activity_login">Se connecter</string>
+    <string name="itm_inscription">S\'inscrire</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Courriel</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Se connecter</string>
+    <string name="action_sign_in_short">Se connecter</string>
+    <string name="error_invalid_email">Courriel non valide</string>
+    <string name="error_invalid_password">Mot de passe très court</string>
+    <string name="error_incorrect_password">Mot de passe incorrecte</string>
+    <string name="error_field_required">Champ requis</string>
+    <string name="permission_rationale">"Permission de lire les contacts est necessaire."
+    </string>
+
+
 </resources>

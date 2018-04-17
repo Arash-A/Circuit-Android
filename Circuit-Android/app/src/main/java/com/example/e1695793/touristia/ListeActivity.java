@@ -101,7 +101,7 @@ public class ListeActivity extends AppCompatActivity {
                 adapter = new CircuitAdapter(ListeActivity.this, circuitsList);
                 mRecyclerView.setAdapter(adapter);
             } else {
-                Toast.makeText(ListeActivity.this, "Failed to fetch data!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListeActivity.this, "Erreur lors de lire data!", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -119,7 +119,7 @@ public class ListeActivity extends AppCompatActivity {
 
                 String imgUrl=post.optString("urlImage");
                 imgUrl=imgUrl.replace("\\","");
-                String fix="https://circuitvoyage.000webhostapp.com/";
+                String fix="https://touristia.000webhostapp.com/";
                 item.setUrlImage(fix+imgUrl);
                 item.setDescription(post.optString("description"));
                 item.setPrix(post.optString("prix"));

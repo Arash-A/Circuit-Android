@@ -6,33 +6,39 @@
     <group android:checkableBehavior="single"
         >
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_conn"
+            android:icon="@drawable/customer"
+            android:visible="true"
+            android:title="@string/itm_connecter" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_inscrire"
+            android:icon="@drawable/customer"
+            android:visible="true"
+            android:title="@string/itm_inscription" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_panier"
+            android:icon="@drawable/cart"
+            android:visible="false"
+            android:title="@string/itm_panier" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/exit"
+            android:visible="false"
+            android:title="@string/itm_deconn" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="À propos">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_site"
+                android:icon="@drawable/home"
+                android:title="@string/itm_siteWeb" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_equipe"
+                android:icon="@drawable/group"
+                android:title="@string/itm_infoEquipe" />
+
         </menu>
     </item>
 
