@@ -1,12 +1,15 @@
 package com.example.e1695793.touristia;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.support.design.widget.NavigationView;
 import android.support.v7.widget.RecyclerView;
 //import android.text.Html;
 //import android.text.TextUtils;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;

@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.ClipData;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -331,7 +332,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
-
+            /*https://www.androidhive.info/2012/08/android-session-management-using-shared-preferences/
+            * http://blog.kerul.net/2017/05/login-json-android-using-login-activity.html
+            * */
             try {
                 Integer result = 0;/*
                 HttpURLConnection urlConnection;
@@ -399,22 +402,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             mAuthTask = null;
             showProgress(false);
-            Intent Intent = new Intent(LoginActivity.this, ListeActivity.class);
+
+            SharedPreferences pref = getApplicationContext().getSharedPreferences("loginState", 0); // 0 - for private mode
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("loggedIn", true); // Storing boolean - true/false
+            editor.commit(); // commit changes
+
+            Intent Intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(Intent);
-/*            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-            Menu nav_Menu = navigationView.getMenu();
-            nav_Menu.findItem(R.id.nav_conn).setVisible(false);
-            nav_Menu.findItem(R.id.nav_inscrire).setVisible(false);
 
-            nav_Menu.findItem(R.id.nav_panier).setVisible(true);
-            nav_Menu.findItem(R.id.nav_logout).setVisible(true);*/
-
-/*            if (success) {
-                finish();
-            } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
-            }*/
         }
 
         @Override

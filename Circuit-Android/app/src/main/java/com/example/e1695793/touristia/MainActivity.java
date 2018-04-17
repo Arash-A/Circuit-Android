@@ -2,6 +2,7 @@ package com.example.e1695793.touristia;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,19 +29,35 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
+        //NavigationView navigationView = findViewById(R.id.nav_view);
+        Menu nav_Menu = navigationView.getMenu();
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("loginState", 0); // 0 - for private mode
+        Boolean l = pref.getBoolean("loggedIn", false);
+        if (l) {
+            nav_Menu.findItem(R.id.nav_conn).setVisible(false);
+            nav_Menu.findItem(R.id.nav_inscrire).setVisible(false);
+
+            nav_Menu.findItem(R.id.nav_panier).setVisible(true);
+            nav_Menu.findItem(R.id.nav_logout).setVisible(true);
+        } else {
+            nav_Menu.findItem(R.id.nav_conn).setVisible(false);
+            nav_Menu.findItem(R.id.nav_inscrire).setVisible(false);
+
+            nav_Menu.findItem(R.id.nav_panier).setVisible(true);
+            nav_Menu.findItem(R.id.nav_logout).setVisible(true);
+        }
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        Button btn_lister= findViewById(R.id.btn_lister);
+        Button btn_lister = findViewById(R.id.btn_lister);
         btn_lister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
